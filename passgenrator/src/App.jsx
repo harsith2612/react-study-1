@@ -29,7 +29,9 @@ function App() {
   const copyToBoard=useCallback(()=>{
     passRef.current?.select();
     window.navigator.clipboard.writeText(pass)
-  },[pass])
+  },[pass]);
+
+  
   useEffect(()=>{
     passwordGenrator()
   },[length,useCharacter,useNumber,setPass])
